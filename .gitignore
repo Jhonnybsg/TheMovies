@@ -1,33 +1,106 @@
-# Gradle files
-.gradle/
-build/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
+# Android Studio specific files
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+.gradle/
+local.properties
+/.cxx/
+/*.iml
+.DS_Store
+*.log
 
 # Keystore files
 *.jks
 *.keystore
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# Gradle files
+.gradle/
+/build/
+/out/
+/captures/
+/intermediates/
+/target/
+.externalNativeBuild/
+.cxx/
+local.properties
 
-# Android Profiling
+# Gradle Wrapper files
+!gradle-wrapper.jar
+gradle-wrapper.properties
+
+# App-specific build files
+**/build/
+
+# APKs
+*.apk
+*.ap_
+*.aab
+
+# Files for the Android Emulator
 *.hprof
+*.lock
+*.avd
+*.ini
+
+# Proguard files
+proguard/
+proguard-cache/
+
+# IntelliJ
+.idea/
+
+# Translations
+*.mo
+
+# Firebase
+firebase-debug.log
+
+# Miscellaneous
+# Eclipse
+.project
+.classpath
+.cxx/
+.externalNativeBuild/
+# Android Studio Navigation editor temp files
+.navigation/
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Generated Files
+/build/
+/.idea/
+/output.json
+
+# Local configuration file (SDK location, etc.)
+local.properties
+
+# Crashlytics / Fabric
+crashlytics.properties
+fabric.properties
+crashlytics-build.properties
+*.map
+
+# Virtual Machine
+.vagrant/
+*.swp
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.nfs*
+
+# Log files
+*.log
+
+# Android Log files
+*.log
