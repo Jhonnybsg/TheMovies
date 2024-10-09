@@ -9,4 +9,5 @@ and best practices while building modern android apps.
 I will be updating this project frequently with new features. 
 
 
-![image](https://github.com/user-attachments/assets/a09a781c-0ecc-4b7a-ac8a-4ab55a216104)
+![image](https://github.com/user-attachments/assets/56a3c76a-2ba7-4458-9769-4de64a2ee96d)
+
