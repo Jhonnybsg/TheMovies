@@ -68,5 +68,5 @@ fun doSomething() {
 sealed class UiState {
     data class Success(val data: List<Movie>) : UiState()
     data class Failure(val errorMessage: String) : UiState()
-    object Loading : UiState()
+    data object Loading : UiState()
 }
