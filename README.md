@@ -1,4 +1,4 @@
-The Movies APP 
+**The Movies APP **
 
 This app integrates the TMDB API to show a list of movies and its details. 
 https://www.themoviedb.org/
