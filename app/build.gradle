@@ -91,8 +91,17 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.51.1")
     kapt("com.google.dagger:hilt-android-compiler:2.51.1")
 
+    //Hilt for Compose
+    implementation "androidx.hilt:hilt-navigation-compose:1.2.0"
+
     //Coil for Images
     implementation("io.coil-kt:coil-compose:2.4.0")
+
+    //Navigation
+    implementation "androidx.navigation:navigation-compose:2.8.2"
+
+    //Lifecycle Viewmodel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6"
 }
 
 kapt {
