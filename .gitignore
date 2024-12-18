@@ -21,6 +21,8 @@ local.properties
 .externalNativeBuild/
 .cxx/
 local.properties
+gradlew
+gradlew.bat
 
 # Gradle Wrapper files
 !gradle-wrapper.jar

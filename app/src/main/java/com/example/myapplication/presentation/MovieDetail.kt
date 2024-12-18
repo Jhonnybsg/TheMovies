@@ -3,8 +3,10 @@ package com.example.myapplication.presentation
 import androidx.compose.foundation.gestures.Orientation
 import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -19,14 +21,23 @@ import com.example.myapplication.common.BASE_IMAGE_URL
 
 @Composable
 fun MovieDetailUI(
-    movie: Int
+    movieId: String
 ) {
     val scrollState = rememberScrollState()
     Column(
-        modifier = Modifier.scrollable(
-            state = scrollState, orientation = Orientation.Vertical
-        )
+        modifier = Modifier
+            .scrollable(
+                state = scrollState, orientation = Orientation.Vertical
+            )
+            .fillMaxSize()
     ) {
+
+        Text(
+            text = movieId,
+            modifier = Modifier.fillMaxSize()
+        )
+
+
 //        AsyncImage(
 //            model = ImageRequest.Builder(LocalContext.current)
 //                .data(BASE_IMAGE_URL + movie.backdrop_path)

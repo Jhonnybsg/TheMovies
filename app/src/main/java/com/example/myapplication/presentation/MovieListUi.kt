@@ -38,7 +38,10 @@ import com.example.myapplication.ui.theme.PurpleGrey40
 import com.example.myapplication.ui.theme.background
 
 @Composable
-fun MovieListUi() {
+fun MovieListUi(
+    modifier: Modifier = Modifier,
+    onClickMovieDetail: (movieId: Int) -> Unit
+) {
 
     val viewModel: MovieViewModel = hiltViewModel()
 
@@ -49,8 +52,12 @@ fun MovieListUi() {
     }
 
     when (movieState) {
+
         is UiState.Success -> {
-            MovieList(items = (movieState as UiState.Success).data)
+            MovieList(
+                items = (movieState as UiState.Success).data,
+                onclick = onClickMovieDetail
+            )
         }
 
         is UiState.Failure -> {
@@ -65,7 +72,10 @@ fun MovieListUi() {
 }
 
 @Composable
-fun MovieList(items: List<Movie> = listOf()) {
+fun MovieList(
+    items: List<Movie> = listOf(),
+    onclick: (id: Int) -> Unit
+) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -73,19 +83,21 @@ fun MovieList(items: List<Movie> = listOf()) {
             .padding(start = 16.dp, end = 16.dp)
     ) {
         items(items) { item ->
-            ListItemView(item)
+            ListItemView(item, onclick)
         }
     }
 }
 
 @Composable
-fun ListItemView(item: Movie) {
+fun ListItemView(
+    item: Movie,
+    onclick: (movieId: Int) -> Unit
+) {
     Card(
         modifier = Modifier
-            .padding(top = 8.dp, bottom = 8.dp)
             .clickable {
-
-            },
+                onclick(item.id)
+            }. padding(top = 8.dp, bottom = 8.dp),
         elevation = CardDefaults.cardElevation(8.dp),
     ) {
         Row(
@@ -166,7 +178,8 @@ fun PreviewItemList() {
                     vote_average = 0.0f,
                     vote_count = 0
                 )
-            )
+            ),
+            onclick = {}
         )
     }
 }
